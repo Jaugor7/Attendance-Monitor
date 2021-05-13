@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container-fluid ">
+  <h3 class="display-8  mx-auto my-2">Students List..</h3>
+</div>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Roll Number</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+      </tr>
+    </thead>
+    <tbody>
+
+        {% for student in students %}
+        <tr>
+          <th scope="row">{{ forloop.counter }}</th>
+          <td>
+            <a href="{% url 'studentView' student.rollNumber %}" class="text-decoration-none text-dark">
+              {{ student.rollNumber }}
+            </a>
+          </td>
+          <td>
+            <a href="{% url 'studentView' student.rollNumber %}" class="text-decoration-none text-dark">
+              {{ student.firstName }}
+            </a>
+          </td>
+          <td>
+            <a href="{% url 'studentView' student.rollNumber %}" class="text-decoration-none text-dark">
+              {{ student.lastName }}
+            </a>
+          </td>
+        </tr>
+      {% endfor %}
+
+    </tbody>
+  </table>
+{% endblock %}

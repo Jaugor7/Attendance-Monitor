@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="container-fluid ">
+  <h3 class="display-8  mx-auto">{{ rollNumber }} {{ firstName }} {{ lastName }} was Present On...</h3>
+</div>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Date</th>
+        <th>Time</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      {% for record in studentRecords %}
+      <tr>
+        <th scope="row">{{ record.date }}</th>
+        <td>{{ record.time }}</td>
+      </tr>
+      {% endfor %}
+
+    </tbody>
+  </table>
+
+
+{% endblock %}  

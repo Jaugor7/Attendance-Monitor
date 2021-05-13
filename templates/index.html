@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="p-5 rounded-3">
+    <div class="container-fluid ">
+      <h1 class="display-7 fw-bold mx-auto">Project Title: Attendece Management Monitoring.</h1>
+      <h3 class="display-8  mx-auto">Project Supervisor: Dr.Ruchi Verma</h3>
+      <h3 class="display-8  mx-auto">Submitted By: Abhinav Sharma 171297</h3>
+      
+      <a href="{% url 'teacherView' %}">
+          <button class="btn btn-success btn-lg mt-3" type="button">
+              Click Here To View Attendence.
+            </button>
+        </a>
+    </div>
+  </div>
+
+
+{% endblock %}
